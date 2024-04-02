@@ -155,6 +155,7 @@ test_coef/*.png
 **/*.ipynb
 **/*.dat
 **/*.bz2
+!/models/sean_codes/styles_test/**/*.npy
 /pretrained_models/
 /logs/
 /input/

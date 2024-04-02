@@ -1,0 +1,8 @@
+.idea/
+.DS_Store
+/dataset_info_ctrlhair/
+/external_model_params/
+/model_trained/
+**/__pycache__/**
+
+

@@ -1,0 +1,33 @@
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "~3.10"
+torch = {version = "1.13.1", source = "torch+cu117"}
+torchvision = {version = "0.14.1", source = "torch+cu117"}
+clip = {git = "https://github.com/openai/CLIP.git"}
+torchmetrics = "0.11.4"
+numpy = "1.23.5"
+pillow = "10.0.0"
+pandas = "2.0.1"
+wandb = "0.15.10"
+addict = "2.4.0"
+tqdm = "4.66.1"
+gdown = "3.12.2"
+dlib = "19.24.1"
+scipy = "1.10.1"
+opencv-python = "4.7.0.72"
+dill = "0.3.6"
+face-alignment = "1.3.4"
+matplotlib = "3.7.1"
+joblib = "1.2.0"
+scikit-learn = "1.2.2"
+
+[[tool.poetry.source]]
+name = "torch+cu117"
+url = "https://download.pytorch.org/whl/cu117"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

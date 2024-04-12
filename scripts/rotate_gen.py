@@ -13,7 +13,8 @@ from tqdm.auto import tqdm
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from scripts.rotate_train import Trainer
-from utils.train import seed_everything, list_image_files
+from utils.train import seed_everything
+from utils.image_utils import list_image_files
 
 toTensor = T.ToTensor()
 net_trainer = Trainer()

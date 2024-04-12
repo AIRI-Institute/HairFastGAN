@@ -97,6 +97,7 @@ There is a list of scripts below, see arguments via --help for details.
 
 | Path                                    | Description <img width=200>
 |:----------------------------------------| :---
+| scripts/align_face.py                   | Processing of raw photos for inference
 | scripts/fid_metric.py                   | Metrics calculation
 | scripts/rotate_gen.py                   | Dataset generation for rotate training
 | scripts/blending_gen.py                 | Dataset generation for blending training
@@ -152,12 +153,10 @@ The code [CtrlHair](https://github.com/XuyangGuo/CtrlHair), [SEAN](https://githu
 
 If you use this code for your research, please cite our paper:
 ```
-@misc{nikolaev2024hairfastgan,
-      title={HairFastGAN: Realistic and Robust Hair Transfer with a Fast Encoder-Based Approach}, 
-      author={Maxim Nikolaev and Mikhail Kuznetsov and Dmitry Vetrov and Aibek Alanov},
-      year={2024},
-      eprint={2404.01094},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{nikolaev2024hairfastgan,
+  title={HairFastGAN: Realistic and Robust Hair Transfer with a Fast Encoder-Based Approach},
+  author={Nikolaev, Maxim and Kuznetsov, Mikhail and Vetrov, Dmitry and Alanov, Aibek},
+  journal={arXiv preprint arXiv:2404.01094},
+  year={2024}
 }
 ```

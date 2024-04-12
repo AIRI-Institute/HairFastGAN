@@ -12,7 +12,8 @@ from tqdm.auto import tqdm
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from models.Encoders import ClipModel
 from utils.seed import set_seed
-from utils.train import parallel_load_images, list_image_files
+from utils.train import parallel_load_images
+from utils.image_utils import list_image_files
 
 
 def name_path(pair):

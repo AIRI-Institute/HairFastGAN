@@ -3,7 +3,6 @@ import pickle
 import random
 import shutil
 import typing as tp
-from pathlib import Path
 
 import numpy as np
 import torch
@@ -62,20 +61,6 @@ class WandbLogger:
 
     def __del__(self):
         self.wandb.finish()
-
-
-def list_image_files(directory):
-    image_extensions = ['.jpg', '.jpeg', '.png']
-    image_files = []
-
-    for entry in sorted(os.listdir(directory)):
-        file_path = os.path.join(directory, entry)
-        if os.path.isfile(file_path):
-            file_extension = Path(file_path).suffix.lower()
-            if file_extension in image_extensions:
-                image_files.append(entry)
-
-    return image_files
 
 
 def toggle_grad(model, flag=True):

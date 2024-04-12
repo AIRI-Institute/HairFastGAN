@@ -7,7 +7,8 @@ import numpy as np
 from tqdm.auto import tqdm
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from utils.train import seed_everything, list_image_files
+from utils.train import seed_everything
+from utils.image_utils import list_image_files
 from hair_swap import get_parser, HairFast
 from utils.save_utils import save_latents
 

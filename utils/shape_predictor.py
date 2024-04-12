@@ -96,6 +96,8 @@ def align_face(data, predictor=None, is_filepath=False, return_tensors=True):
     if is_filepath:
         lms = get_landmark(data, predictor)
     else:
+        if not isinstance(data, list):
+            data = [data]
         images, lms = get_landmark_from_tensors(data, predictor)
 
     imgs = []

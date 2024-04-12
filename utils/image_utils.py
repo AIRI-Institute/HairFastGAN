@@ -1,21 +1,15 @@
 import os
 import subprocess
 import tempfile
+from pathlib import Path
 
-import PIL
-import numpy as np
-import scipy
 import torch
 import torch.nn.functional as F
-import torchvision
-from PIL import Image
 from PIL import Image
 from torchvision.transforms import transforms
 from torchvision.utils import save_image
 
 from models.Net import get_segmentation
-from models.face_parsing.model import seg_mean, seg_std
-from utils.bicubic import BicubicDownSample
 
 
 def equal_replacer(images: list[torch.Tensor]) -> list[torch.Tensor]:
@@ -98,3 +92,17 @@ def poisson_image_blending(final_image, face_image, dilate_erosion=30, maxn=115)
         )
 
         return Image.open(out_image_path), Image.open(mask_path)
+
+
+def list_image_files(directory):
+    image_extensions = ['.jpg', '.jpeg', '.png']
+    image_files = []
+
+    for entry in sorted(os.listdir(directory)):
+        file_path = os.path.join(directory, entry)
+        if os.path.isfile(file_path):
+            file_extension = Path(file_path).suffix.lower()
+            if file_extension in image_extensions:
+                image_files.append(entry)
+
+    return image_files

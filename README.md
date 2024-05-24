@@ -1,6 +1,7 @@
 # HairFastGAN: Realistic and Robust Hair Transfer with a Fast Encoder-Based Approach
 
 <a href="https://arxiv.org/abs/2404.01094"><img src="https://img.shields.io/badge/arXiv-2404.01094-b31b1b.svg" height=22.5></a>
+<a href="https://huggingface.co/spaces/AIRI-Institute/HairFastGAN"><img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md.svg" height=22.5></a>
 <a href="https://colab.research.google.com/#fileId=https://huggingface.co/AIRI-Institute/HairFastGAN/blob/main/notebooks/HairFast_inference.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" height=22.5></a>
 [![License](https://img.shields.io/github/license/AIRI-Institute/al_toolbox)](./LICENSE)
 
@@ -14,7 +15,10 @@
 The proposed HairFast framework allows to edit a hairstyle on an arbitrary photo based on an example from other photos. Here we have an example of how the method works by transferring a hairstyle from one photo and a hair color from another.
 </p>
 
-  
+## Updates
+
+- [24/05/2024] 🌟🌟🌟 Release of the [official demo](https://huggingface.co/spaces/AIRI-Institute/HairFastGAN) on Hagging Face 🤗.
+- [01/04/2024] 🔥🔥🔥 HairFastGAN release.
   
 ## Prerequisites
 You need following hardware and python version to run our method.
@@ -91,6 +95,8 @@ See the code for input parameters and output formats.
 
 * Alternatively, you can use our [Colab Notebook](https://colab.research.google.com/#fileId=https://huggingface.co/AIRI-Institute/HairFastGAN/blob/main/notebooks/HairFast_inference.ipynb) to prepare the environment, download the code, pretrained weights, and allow you to run experiments with a convenient form.
 
+* You can also try our method on the [Hagging Face demo](https://huggingface.co/spaces/AIRI-Institute/HairFastGAN) 🤗.
+
 ## Scripts
 
 There is a list of scripts below, see arguments via --help for details.
@@ -99,12 +105,12 @@ There is a list of scripts below, see arguments via --help for details.
 |:----------------------------------------| :---
 | scripts/align_face.py                   | Processing of raw photos for inference
 | scripts/fid_metric.py                   | Metrics calculation
-| scripts/rotate_gen.py                   | Dataset generation for rotate training
-| scripts/blending_gen.py                 | Dataset generation for blending training
-| scripts/pp_gen.py                       | Dataset generation for post processing training
-| scripts/rotate_train.py                 | Rotate training
-| scripts/blending_train.py               | Blending training
-| scripts/pp_train.py                     | Post processing training
+| scripts/rotate_gen.py                   | Dataset generation for rotate encoder training
+| scripts/blending_gen.py                 | Dataset generation for color encoder training
+| scripts/pp_gen.py                       | Dataset generation for refinement encoder training
+| scripts/rotate_train.py                 | Rotate encoder training
+| scripts/blending_train.py               | Color encoder training
+| scripts/pp_train.py                     | Refinement encoder training
 
 
 ## Training
@@ -128,8 +134,8 @@ Overview of HairFast: first, the images go through an Embedding module where we 
     ├── 📂 models                     # Folder containting all the models
     │   ├── ...
     │   ├── 📄 Embedding.py               # Implementation of Embedding module
-    │   ├── 📄 Alignment.py               # Implementation of Alignment module
-    │   ├── 📄 Blending.py                # Implementation of Blending module
+    │   ├── 📄 Alignment.py               # Implementation of Pose and Shape alignment modules
+    │   ├── 📄 Blending.py                # Implementation of Color and Refinement alignment modules
     │   ├── 📄 Encoders.py                # Implementation of encoder architectures
     │   └── 📄 Net.py                     # Implementation of basic models
     │

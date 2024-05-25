@@ -123,7 +123,7 @@ We use [Weights & Biases](https://wandb.ai/home) to track experiments. Before tr
 <p align="center">
   <img src="https://huggingface.co/AIRI-Institute/HairFastGAN/resolve/main/docs/assets/diagram.webp" alt="Diagram"/>
   <br>
-Overview of HairFast: first, the images go through an Embedding module where we obtain various latent representations and segmentation masks. Next, we transfer the desired hairstyle shape using Alignment module and the desired hair color using Blending module. The last step we do Post Processing to bring back the lost details of the original image where they are needed.
+Overview of HairFast: the images first pass through the Pose alignment module, which generates a pose-aligned face mask with the desired hair shape. Then we transfer the desired hairstyle shape using Shape alignment and the desired hair color using Color alignment. In the last step, Refinement alignment returns the lost details of the original image where they are needed.
 </p>
 
 ## Repository structure

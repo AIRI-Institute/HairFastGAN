@@ -17,7 +17,7 @@ The proposed HairFast framework allows to edit a hairstyle on an arbitrary photo
 
 ## Updates
 
-- [24/05/2024] 🌟🌟🌟 Release of the [official demo](https://huggingface.co/spaces/AIRI-Institute/HairFastGAN) on Hagging Face 🤗.
+- [24/05/2024] 🌟🌟🌟 Release of the [official demo](https://huggingface.co/spaces/AIRI-Institute/HairFastGAN) on Hugging Face 🤗.
 - [01/04/2024] 🔥🔥🔥 HairFastGAN release.
   
 ## Prerequisites
@@ -95,7 +95,7 @@ See the code for input parameters and output formats.
 
 * Alternatively, you can use our [Colab Notebook](https://colab.research.google.com/#fileId=https://huggingface.co/AIRI-Institute/HairFastGAN/blob/main/notebooks/HairFast_inference.ipynb) to prepare the environment, download the code, pretrained weights, and allow you to run experiments with a convenient form.
 
-* You can also try our method on the [Hagging Face demo](https://huggingface.co/spaces/AIRI-Institute/HairFastGAN) 🤗.
+* You can also try our method on the [Hugging Face demo](https://huggingface.co/spaces/AIRI-Institute/HairFastGAN) 🤗.
 
 ## Scripts
 

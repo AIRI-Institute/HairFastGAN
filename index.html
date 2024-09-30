@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HairFastGAN: A fast and realistic approach to hair transfer using GAN technology">
+    <meta name="keywords" content="HairFastGAN, hair transfer, GAN, artificial intelligence, computer vision">
+    <title>HairFastGAN: Realistic and Robust Hair Transfer</title>
+    
+    <!-- Preload fonts -->
+    <link rel="preload" href="/assets/Inter/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/Inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/back-button.css">
+    <link rel="stylesheet" href="css/menu.css">
+    
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/zoom.js" defer></script>
+    <script src="js/copy.js" defer></script>
+    <script src="js/back-button.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <nav id="quick-access-menu">
+    <ul>
+      <li><a href="#buttons">Resources</a></li>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#bibtex">BibTeX</a></li>
+    </ul>
+  </nav>
+  
+
+  <header class="page-header">
+    <div class="header-content">
+        <h1 class="page-title">
+            <span class="title-highlight">HairFastGAN:</span>
+            <span class="title-subtitle">Realistic and Robust Hair Transfer with a Fast Encoder-Based Approach</span>
+        </h1>
+    </div>
+</header>
+
+<section class="authors-section" style="margin-top: -70px;">
+    <div class="container">
+        <div class="authors-container" data-aos="fade-up" data-aos-duration="1000">
+            <div class="author">
+                <span class="author-name">Nikolaev Maxim</span>
+                <span class="author-affiliations">
+                  <span class="author-icon"><img src="assets/images/AIRI - icon.svg" alt="AIRI icon"></span>
+                  <span class="author-icon"><img src="assets/images/hse.png" alt="HSE icon"></span>
+                </span>
+            </div>
+            <div class="author">
+                <span class="author-name">Mikhail Kuznetsov</span>
+                <span class="author-affiliations">
+                  <span class="author-icon"><img src="assets/images/AIRI - icon.svg" alt="AIRI icon"></span>
+                  <span class="author-icon"><img src="assets/images/hse.png" alt="HSE icon"></span>
+                  <span class="author-icon"><img src="assets/images/Skoltech_Logo_Black.png" alt="Skol icon"></span>
+                </span>
+            </div>
+            <div class="author">
+                <span class="author-name">Dmitry Vetrov</span>
+                <span class="author-affiliations">
+                  <span class="author-icon"><img src="assets/images/constructor-university.png" alt="CU icon"></span>
+                </span>
+            </div>
+            <div class="author">
+                <span class="author-name">Aibek Alanov</span>
+                <span class="author-affiliations">
+                  <span class="author-icon"><img src="assets/images/AIRI - icon.svg" alt="AIRI icon"></span>
+                  <span class="author-icon"><img src="assets/images/hse.png" alt="HSE icon"></span>
+                </span>
+            </div>
+        </div>
+        
+        <div class="affiliations-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="affiliations-column">
+            <div class="affiliation">
+              <div class="affiliation-icon">
+                <img src="assets/images/AIRI - icon.svg" alt="AIRI icon">
+              </div>
+              <div class="affiliation-text">AIRI - Artificial Intelligence Research Institute</div>
+            </div>
+            <div class="affiliation">
+              <div class="affiliation-icon">
+                <img src="assets/images/hse.png" alt="HSE icon">
+              </div>
+              <div class="affiliation-text">HSE University</div>
+            </div>
+          </div>
+          <div class="affiliations-column">
+            <div class="affiliation">
+              <div class="affiliation-icon">
+                <img src="assets/images/Skoltech_Logo_Black.png" alt="Skoltech icon">
+              </div>
+              <div class="affiliation-text">Skolkovo Institute of Science and Technology</div>
+            </div>
+            <div class="affiliation">
+              <div class="affiliation-icon">
+                <img src="assets/images/constructor-university.png" alt="CU icon">
+              </div>
+              <div class="affiliation-text">Constructor University, Bremen</div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Main Navigation -->
+    <section class="container" id="buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <ul class="nav nav-pills nav-justified" style="margin-top: 30px; margin-bottom: 30px;">
+                    <li class="nav-item" style="margin: 0 10px;">
+                        <a href="https://arxiv.org/abs/2404.01094" class="nav-link custom-nav-link" style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="assets/images/paper.png" height="80px" alt="Paper Icon">
+                            <h4 style="margin-top: 10px; font-size: 1.2em;"><strong>Paper</strong></h4>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="margin: 0 10px;">
+                        <a href="https://github.com/AIRI-Institute/HairFastGAN" target="_blank" class="nav-link custom-nav-link" style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="assets/images/git_icon.png" height="80px" alt="GitHub Icon">
+                            <h4 style="margin-top: 10px; font-size: 1.2em;"><strong>Code</strong></h4>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="margin: 0 10px;">
+                        <a href="https://huggingface.co/papers/2404.01094" target="_blank" class="nav-link custom-nav-link" style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="assets/images/hug_face.png" height="80px" alt="Hugging Face Icon">
+                            <h4 style="margin-top: 10px; font-size: 1.2em;"><strong>HF paper</strong></h4>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="margin: 0 10px;">
+                        <a href="https://huggingface.co/spaces/AIRI-Institute/HairFastGAN" target="_blank" class="nav-link custom-nav-link" style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="assets/images/spaces.png" height="80px" alt="Hugging Face Icon">
+                            <h4 style="margin-top: 10px; font-size: 1.2em;"><strong>HF Demo</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Image -->
+    <div class="image-container" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+        <img src="assets/images/logo.webp" width="1000px" class="zoomable diagram-image" alt="HairFast teaser">
+        <div class="image-caption">
+            The proposed <b>HairFast</b> framework allows to edit a hairstyle on an arbitrary photo based on an example from other photos. Here we have an example of how the method works by transferring a hairstyle from one photo and a hair color from another. 
+        </div>
+    </div>
+
+    <!-- Abstract Section -->
+    <section class="abstract-section" id="abstract" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">
+        <div class="hero-body">
+            <div class="container abstract-container">
+                <h1 class="abstract-title">Abstract</h1>
+                <p class="abstract-text">
+                    Our paper addresses the complex task of transferring a hairstyle from a reference image to an input photo for virtual hair try-on. This task is challenging due to the need to adapt to various photo poses, the sensitivity of hairstyles, and the lack of objective metrics. The current state of the art hairstyle transfer methods use an optimization process for different parts of the approach, making them inexcusably slow. At the same time, faster encoder-based models are of very low quality because they either operate in StyleGAN's W+ space or use other low-dimensional image generators. Additionally, both approaches have a problem with hairstyle transfer when the source pose is very different from the target pose, because they either don't consider the pose at all or deal with it inefficiently. In our paper, we present the HairFast model, which uniquely solves these problems and achieves high resolution, near real-time performance, and superior reconstruction compared to optimization problem-based methods. Our solution includes a new architecture operating in the FS latent space of StyleGAN, an enhanced inpainting approach, and improved encoders for better alignment, color transfer, and a new encoder for post-processing. The effectiveness of our approach is demonstrated on realism metrics after random hairstyle transfer and reconstruction when the original hairstyle is transferred. In the most difficult scenario of transferring both shape and color of a hairstyle from different images, our method performs in less than a second on the Nvidia V100.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="hero" id="overview"  data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">
+        <div class="hero-body">
+            <div class="container" style="max-width: 800px">
+                <h1 style="font-family: 'InterMedium', Arial, sans-serif;">Overview of HairFastGAN</h1>
+                <p style="font-size: 17px; color: #444; margin-bottom: 0.1cm; font-family: 'InterRegular', Arial, sans-serif;">
+                    The images first pass through the Pose alignment module, which generates a pose-aligned face mask with the desired hair shape. Then we transfer the desired hairstyle shape using Shape alignment and the desired hair color using Color alignment. In the last step, Refinement alignment returns the lost details of the original image where they are needed.
+                </p>
+            </div>
+        </div>
+    </section>
+    <center>
+        <div class="image-container" style="margin-top: -50px;"  data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">
+            <img src="assets/images/diagram.webp" width="1040px" class="zoomable diagram-image" loading="lazy">
+            <div class="image-caption"></div>
+        </div>
+    </center>
+
+    <!-- Results Section -->
+    <section class="hero" id="results" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">
+        <div class="hero-body">
+            <div class="container" style="max-width: 800px">
+                <h1 style="font-family: 'InterMedium', Arial, sans-serif;">HairFastGAN Results</h1>
+                
+                <div class="image-container" style="margin-bottom: 40px;">
+                    <img src="assets/examples/metrics.webp" width="100%" alt="HairFastGAN Main Result" class="zoomable" loading="lazy">
+                    <p style="text-align: justify; font-size: 17px; margin-top: 20px; font-family: 'InterRegular', Arial, sans-serif;">
+                        HairFast outperforms the other methods in post-edit realism, particularly in complex poses, and also has better reconstruction metrics. At the same time, the method works in less than a second.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BibTeX Section -->
+    <div class="bibtex-card" id="bibtex" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">
+        <div class="bibtex-header">
+            <h2 class="bibtex-title">BibTeX</h2>
+            <button id="copy-button" class="copy-button">
+                <svg class="copy-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+                    <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+                </svg>
+                <span>Copy</span>
+            </button>
+        </div>
+        <pre id="bibtex-content" class="bibtex-content">
+@article{nikolaev2024hairfastgan,
+  title={HairFastGAN: Realistic and Robust Hair Transfer with a Fast Encoder-Based Approach},
+  author={Nikolaev, Maxim and Kuznetsov, Mikhail and Vetrov, Dmitry and Alanov, Aibek},
+  journal={arXiv preprint arXiv:2404.01094},
+  year={2024}
+}
+        </pre>
+    </div>
+
+    <!-- Footer -->
+    <footer class="hero">
+        <div class="hero-body">
+            <div class="container" style="width: 400px; text-align: center; margin-top: 50px;">
+                <a href="https://airi.net/" target="_blank">
+                    <img src="assets/images/AIRI - Full logo.svg" alt="AIRI - Artificial Intelligence Research Institute" style="max-width: 100%; height: 40px;">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </button>
+</body>
+</html>

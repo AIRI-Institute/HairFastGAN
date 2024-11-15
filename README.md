@@ -17,6 +17,7 @@ The proposed HairFast framework allows to edit a hairstyle on an arbitrary photo
 
 ## Updates
 
+- [25/09/2024] 🎉🎉🎉 HairFastGAN has been accepted by [NeurIPS 2024](https://nips.cc/virtual/2024/poster/93397).
 - [24/05/2024] 🌟🌟🌟 Release of the [official demo](https://huggingface.co/spaces/AIRI-Institute/HairFastGAN) on Hugging Face 🤗.
 - [01/04/2024] 🔥🔥🔥 HairFastGAN release.
   
